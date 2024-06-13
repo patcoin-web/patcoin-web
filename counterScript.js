@@ -1,130 +1,67 @@
 
 
-const countElement = document.getElementById("count");
-const levelElement = document.getElementById("stage");
-const increaseButton = document.getElementById("increase");
+document.addEventListener("DOMContentLoaded", () => {
+  const countElement = document.getElementById("count");
+  const levelElement = document.getElementById("level");
+  const increaseButton = document.getElementById("increase");
+  let stage = document.getElementById("stage");
 
-let count = parseInt(localStorage.getItem("count")) || 0;
-let level = "Kid";
-let countdownActive = false;
+  let count = parseInt(localStorage.getItem("count")) || 0;
+  let level = "Now!";
+  let isCountingDown = false;
+  let countdownValue = 30;
 
-updateCount();
-
-increaseButton.addEventListener("click", handleIncrement);
-
-function handleIncrement() {
-  count++;
-  updateCount();
-  localStorage.setItem("count", count);
-  if (count === 10 && !countdownActive) {
-    startCountdown(10);
-    countdownActive = true;
-    increaseButton.removeEventListener("click", handleIncrement);
-  } else if (count > 10 && countdownActive) {
-    return;
-  }
-  if (count >= 200) {
-    levelElement.textContent = "Adolescent";
-  }
-  if (count >= 230) {
-    levelElement.textContent = "Adult";
-  }
-  if (count >= 250) {
-    levelElement.textContent = "Elder";
-  }
-  if (count >= 400) {
-    levelElement.textContent = "Ancestor";
-  }
-}
-
-function updateCount() {
   countElement.textContent = count;
-}
 
-function startCountdown(countdownValue) {
-  let countdown = countdownValue;
-  let interval = setInterval(() => {
-    levelElement.textContent = `${countdown}s`;
-    countdown--;
-    if (countdown === 0) {
-      clearInterval(interval);
-      levelElement.textContent = "Kid";
-      countdownActive = false;
-      increaseButton.addEventListener("click", handleIncrement);
-    }
-  }, 1000);
-}
+  function updateLocalStorage() {
+      localStorage.setItem("count", count);
+  }
 
+  function handleIncrement() {
+      if (!isCountingDown) {
+          count++;
+          countElement.textContent = count;
+          updateLocalStorage();
+
+          if (count % 1000 === 0) {
+              startCountdown();
+          }
 
 
+          if (count >= 1000000) {
+            let stage = document.getElementById("stage");
+            stage.textContent = "Adolescent";
+              }
+              if (count >= 3000000) {
+                stage.textContent = "Adult";
+              }
+              if (count >= 8000000) {
+                stage.textContent = "Elder";
+              }
+              if (count >= 15000000) {
+                stage.textContent = "Ancestor";
+              }
 
 
+      }
 
+      
+  }
 
+  function startCountdown() {
+      isCountingDown = true;
+      let interval = setInterval(() => {
+          levelElement.textContent = countdownValue;
+          countdownValue--;
 
+          if (countdownValue < 0) {
+              clearInterval(interval);
+              isCountingDown = false;
+              levelElement.textContent = level;
+              countdownValue = 30;
+          }
+      }, 1000);
+  }
 
-
-
-
-
-
-
-
-
-
-// const countElement = document.getElementById("count");
-// const levelElement = document.getElementById("stage");
-// const timerElement = document.getElementById("timer");
-// const increaseButton = document.getElementById("increase");
-
-// let count = parseInt(localStorage.getItem("count")) || 0;
-// let level = "Amature";
-// let countdownActive = false;
-
-// updateCount();
-
-// increaseButton.addEventListener("click", handleIncrement);
-
-// function handleIncrement() {
-//   count++;
-//   updateCount();
-//   localStorage.setItem("count", count);
-//   if (count === 10 && !countdownActive) {
-//     startCountdown(10);
-//     countdownActive = true;
-//     increaseButton.removeEventListener("click", handleIncrement);
-//   } else if (count > 1000 && countdownActive) {
-//     return;
-//   }
-//   if (count >= 200) {
-//     levelElement.textContent = "Adolescent";
-//   }
-//   if (count >= 230) {
-//     levelElement.textContent = "Adult";
-//   }
-//   if (count >= 250) {
-//     levelElement.textContent = "Elder";
-//   }
-//   if (count >= 400) {
-//     levelElement.textContent = "Ancestor";
-//   }
-// }
-
-// function updateCount() {
-//   countElement.textContent = count;
-// }
-
-// function startCountdown(countdownValue) {
-//   let countdown = countdownValue;
-//   let interval = setInterval(() => {
-//     timerElement.textContent = `${countdown}s`;
-//     countdown--;
-//     if (countdown === 0) {
-//       clearInterval(interval);
-//       timerElement.textContent = "Mine Now!";
-//       countdownActive = false;
-//       increaseButton.addEventListener("click", handleIncrement);
-//     }
-//   }, 1000);
-// }
-
+  increaseButton.addEventListener("click", handleIncrement);
+});
