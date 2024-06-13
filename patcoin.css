@@ -260,18 +260,34 @@ h5.timer {
 
 /* -----TASK----- */
 
-
+.friends-body{
+  background-image: radial-gradient(rgb(77, 78, 26), rgb(125, 124, 124), rgb(144, 147, 132));
+}
 
 
 .task-heading {
-  height: 72px;
+  height: 57px;
   width: 100%;
   text-align: center;
   word-wrap: break-word;
-  margin-top: 160px;
-  margin-bottom: 20px;
-  font-size: 30px;
+  margin-top: 150px;
+  margin-bottom: 5px;
+  font-size: 24px;
   /* background-color: beige; */
+}
+
+.friend-description {
+  margin: 15px;
+  font-size: 20px;
+  width: 70%;
+  margin: auto;
+}
+
+.friend-body {
+  width: 90%;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .task-container{
