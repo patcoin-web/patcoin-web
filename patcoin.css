@@ -73,8 +73,9 @@ img {
   height: auto;
   display: flex;
   flex-direction: column;
-  /* padding-top: 70px; */
-  
+  padding-bottom: 40px;
+  box-sizing: border-box;
+  overflow-y: hidden;
 }
 
 /* .coin-with-value {
@@ -167,9 +168,16 @@ img.patcoin {
   width: 220px;
   height: 200px;
   cursor: pointer;
-  border-radius: 2000px;
+  border-radius: 20000px;
 }
 
+.timer-label {
+  font-size: 14px;
+}
+
+.status-container {
+  margin: 20px;
+}
 
 /*
 h5.timer {
@@ -330,7 +338,8 @@ a .task-currency {
   height: 600px;
   width: 97%;
   align-items: center;
-  background-color: blanchedalmond;
+  margin-top: 110px;
+  /* background-color: blanchedalmond; */
 }
 
 .referal-heading {
@@ -428,8 +437,8 @@ a .task-currency {
  
 
   img.patcoin {
-    height: 35%;
-    width: 75%;
+    height: 33%;
+    width: 60%;
     padding: 0;
     margin: 20px 0 10px;
   }
