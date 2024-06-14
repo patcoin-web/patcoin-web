@@ -71,7 +71,7 @@ img {
 .top {
   width: 97%;
   height: fit-content;
-  background-color: cornflowerblue;
+  /* background-color: cornflowerblue; */
   display: flex;
   flex-direction: column;
   margin-top: 10px;
@@ -103,7 +103,7 @@ img {
 } */
 
 .counter-container {
-  background-color: blueviolet;
+  /* background-color: blueviolet; */
   width: fit-content;
   padding: 5px 20px;
   display: flex;
@@ -208,9 +208,8 @@ h5.timer {
   box-sizing: border-box;
   justify-content: space-around;
   align-content: center;
-  border-bottom-left-radius: 12px;
   background-color: var(--options-bg-color);
-  padding-bottom: 30px;
+  padding-bottom: 10px;
 }
 
 .options {
@@ -386,6 +385,18 @@ a .task-currency {
   padding: 20px;
 }
 
+form {
+  width: 85%;
+  display: flex;
+  gap: 10px;
+  margin-top: 50px;
+} 
+
+.coupon {
+  width: 230px;
+  text-align: center;
+}
+
 .referal-btn {
   padding: 10px;
   margin: auto;
@@ -474,7 +485,7 @@ a .task-currency {
     width: 100%;
     height: fit-content;
     background-color: var(--options-bg-color);
-    padding-bottom: 40px;
+    padding-bottom: 10px;
 
   }
 
@@ -548,7 +559,7 @@ a .task-currency {
   .friend {
     font-size: 19px;
     width: 95%;
-    margin: 15px 0;
+    margin: 45px 0;
     text-wrap: wrap;
   }
 
