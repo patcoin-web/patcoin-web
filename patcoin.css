@@ -337,6 +337,11 @@ h5.timer {
   background-color:rgb(73, 109, 47);
 }
 
+/* .fa-brands{
+  margin: auto;
+  align-self: center;
+} */
+
 i{
   height: 100%;
   width: 100%;
@@ -550,8 +555,8 @@ input {
  
 
   img.patcoin {
-    height: 200px;
-    width: 200px;
+    height: 270px;
+    width: 270px;
     padding: 0;
     margin: 30px 0 70px;
     box-shadow: 0 10px 138px 12px rgb(247, 189, 31);
@@ -562,7 +567,7 @@ input {
     width: 100%;
     height: fit-content;
     background-color: var(--options-bg-color);
-    padding-bottom: 30px;
+    padding-bottom: 40px;
 
   }
 
@@ -615,14 +620,19 @@ input {
 
   form {
     margin: 20px;
+    height: 90px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
   }
 
   .form-control {
     color: rgb(91, 255, 247);
     border-radius: 5px;
     border: navajowhite;
-    padding: 2px 15px;
+    padding: 10px 15px;
     background-color: rgb(146, 146, 146);
+
   }
 
   .btn {
@@ -630,8 +640,9 @@ input {
     background-color: darkslategray;
     border-radius: 5px;
     border: 1.3px solid goldenrod;
-    padding: 0 15px;
+    padding: 5px 15px;
     font-size: 19px;
+    width: 160px;
   }
 
 
