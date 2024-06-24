@@ -177,9 +177,9 @@ img.patcoin {
 }
 
 img.patcoin:hover {
-  width: 215px;
-  height: 215px;
-  transition: .5s;
+  width: 278px;
+  height: 278px;
+  transition: .5s ease-in-out;
 }
 
 .timer-label {
@@ -408,11 +408,11 @@ a .task-currency {
   /* margin-top: -20em; */
 }
 
-img.patcoin:hover {
-  width: 215px;
-  height: 215px;
-  transition: .5s ease-in-out;
-}
+/* img.patcoin:hover {
+  width: 200px;
+  height: 200px;
+  transition: unset;
+} */
 
 .friends-container{
   background-color: rgba(54, 73, 12, .95);
@@ -558,7 +558,7 @@ input {
     height: 270px;
     width: 270px;
     padding: 0;
-    margin: 20px 0 40px;
+    margin: 10px 0 30px;
     box-shadow: 0 10px 138px 12px rgb(247, 189, 31);
   }
 
