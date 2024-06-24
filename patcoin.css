@@ -167,8 +167,8 @@ justify-content: space-between;
 
 
 img.patcoin {
-  width: 260px;
-  height: 260px;
+  width: 220px;
+  height: 220px;
   cursor: pointer;
   border-radius: 20000px;
   box-shadow: 0 10px 138px 12px rgb(253, 185, 96);
@@ -177,8 +177,8 @@ img.patcoin {
 }
 
 img.patcoin:hover {
-  width: 278px;
-  height: 278px;
+  width: 238px;
+  height: 238px;
   transition: .5s ease-in-out;
 }
 
@@ -555,8 +555,8 @@ input {
  
 
   img.patcoin {
-    height: 260px;
-    width: 260px;
+    height: 220px;
+    width: 220px;
     padding: 0;
     margin: 10px 0 20px;
     box-shadow: 0 10px 138px 12px rgb(247, 189, 31);
