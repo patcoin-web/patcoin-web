@@ -411,7 +411,7 @@ a .task-currency {
 img.patcoin:hover {
   width: 200px;
   height: 200px;
-  transition: unset;
+  transition: .5s ease-in-out;
 }
 
 .friends-container{
