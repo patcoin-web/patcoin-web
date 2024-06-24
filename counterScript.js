@@ -23,21 +23,21 @@ document.addEventListener("DOMContentLoaded", () => {
           countElement.textContent = count;
           updateLocalStorage();
 
-          if (count % 1000 === 0) {
+          if (count % 317 === 0) {
               startCountdown();
           }
 
-          if (count >= 1000000) {
+          if (count >= 1500) {
             let stage = document.getElementById("stage");
             stage.textContent = "Adolescent";
               }
-              if (count >= 3000000) {
+              if (count >= 4000) {
                 stage.textContent = "Adult";
               }
-              if (count >= 8000000) {
+              if (count >= 9000) {
                 stage.textContent = "Elder";
               }
-              if (count >= 15000000) {
+              if (count >= 16000) {
                 stage.textContent = "Ancestor";
               }
       }
@@ -103,6 +103,5 @@ btn.addEventListener("click", copyText);
 
 
 // ----Friends----
-
 
 
