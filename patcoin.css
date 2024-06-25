@@ -711,8 +711,21 @@ input {
     border-top-right-radius: 40px;
     box-shadow: 0 -10px 2px .3px rgb(177, 132, 17);
   }
-  
 
+  .task-icon {
+    width: 40px;
+    height: 40px;
+    display: grid;
+    border-radius: 200px;
+    align-items: center;
+    background-color: rgba(96, 137, 75, 0.668);
+    border: 2.6px solid greenyellow;
+  }
+  
+  .task:hover {
+    background-color: rgb(100, 126, 74);
+    transition: linear 2s ease-in-out;
+  }
 
 
 }
