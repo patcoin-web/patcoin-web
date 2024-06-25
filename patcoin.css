@@ -49,6 +49,8 @@ body {
 .coin{
   height: 30px;
   width: 30px;
+  border: 2.5px solid rgb(176, 255, 92);
+  border-radius: 500px;
 }
 
 .header{
@@ -167,8 +169,8 @@ justify-content: space-between;
 
 
 img.patcoin {
-  width: 220px;
-  height: 220px;
+  width: 200px;
+  height: 200px;
   cursor: pointer;
   border-radius: 20000px;
   box-shadow: 0 10px 138px 12px rgb(253, 185, 96);
@@ -177,8 +179,8 @@ img.patcoin {
 }
 
 img.patcoin:hover {
-  width: 238px;
-  height: 238px;
+  width: 278px;
+  height: 278px;
   transition: .5s ease-in-out;
 }
 
@@ -328,19 +330,33 @@ h5.timer {
   background-color: rgb(138, 167, 109);
 }
 
+.task:hover {
+  background-color: rgb(100, 126, 74);
+  transition: linear 2s ease-in-out;
+}
+
 .task-icon {
   width: 40px;
   height: 40px;
   display: grid;
   border-radius: 200px;
   align-items: center;
-  background-color:rgb(73, 109, 47);
+  background-color: rgba(96, 137, 75, 0.668);
+  border: 2.6px solid greenyellow;
 }
 
-/* .fa-brands{
+.reduce-font {
+  font-size: 13px;
+}
+
+.fa-brands{
+  font-size: 19px;
+  height: 20px;
+  display: grid;
   margin: auto;
   align-self: center;
-} */
+  align-self: center;
+}
 
 i{
   height: 100%;
@@ -555,10 +571,10 @@ input {
  
 
   img.patcoin {
-    height: 220px;
-    width: 220px;
+    height: 270px;
+    width: 270px;
     padding: 0;
-    margin: 10px 0 20px;
+    margin: 10px 0 30px;
     box-shadow: 0 10px 138px 12px rgb(247, 189, 31);
   }
 
