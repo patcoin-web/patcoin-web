@@ -27,18 +27,24 @@ document.addEventListener("DOMContentLoaded", () => {
               startCountdown();
           }
 
-          if (count >= 1500) {
+          if (count >= 2000) {
             let stage = document.getElementById("stage");
             stage.textContent = "Adolescent";
               }
-              if (count >= 4000) {
+              if (count >= 9000) {
                 stage.textContent = "Adult";
               }
-              if (count >= 9000) {
+              if (count >= 28000) {
                 stage.textContent = "Elder";
               }
-              if (count >= 16000) {
+              if (count >= 65000) {
+                stage.textContent = "Granny";
+              }
+              if (count >= 100000) {
                 stage.textContent = "Ancestor";
+              }
+              if (count >= 150000) {
+                stage.textContent = "LORD";
               }
       }
 
@@ -78,30 +84,19 @@ const coupon = document.querySelector(".coupon")
 const copyText = (e) => {
  e.preventDefault();
 
- //coupon.select();
- //coupon.setSelectionRange(0, 9999);
+//  coupon.select();
+//  coupon.setSelectionRange(0, 9999);
 
 
   document.execCommand("copy");
 
-  btn.textContent = "Copied!"
+  btn.textContent = "Copied..!!"
   setTimeout(() => {
     btn.textContent = "Copy"
-  }, 3000)
+  }, 3000) 
 
 }
 
 
 btn.addEventListener("click", copyText);
-
-
-
-
-
-
-
-
-
-// ----Friends----
-
 
