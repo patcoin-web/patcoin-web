@@ -78,8 +78,8 @@ const coupon = document.querySelector(".coupon")
 const copyText = (e) => {
  e.preventDefault();
 
- coupon.select();
- coupon.setSelectionRange(0, 9999);
+ //coupon.select();
+ //coupon.setSelectionRange(0, 9999);
 
 
   document.execCommand("copy");
