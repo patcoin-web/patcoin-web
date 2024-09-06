@@ -20,10 +20,10 @@ body {
 
 
 :root {
-  --bg-color: rgb(21, 30, 9);
+  --bg-color: rgb(14, 20, 6);
   --options-height: 35px;
   --options-width: 35px;
-  --options-bg-color: rgb(29, 41, 15);
+  --options-bg-color: rgb(19, 28, 9);
   --text-color: white;
   --icon-width: 30px;
   --icon-height: 30px;
@@ -129,15 +129,17 @@ justify-content: space-between;
   margin: auto;
 }
 
+
 .ballance{
   font-size: var(--big-font-size);
-  /* margin: auto; */
   font-weight: 700;
   padding: 5px;
 }
 
+
 .currency {
   margin-left: 5px;
+
 }
 
 .head-coin {
@@ -169,8 +171,8 @@ justify-content: space-between;
 
 
 img.patcoin {
-  width: 200px;
-  height: 200px;
+  width: 150px;
+  height: 150px;
   cursor: pointer;
   border-radius: 20000px;
   box-shadow: 0 10px 138px 12px rgb(253, 185, 96);
@@ -179,10 +181,20 @@ img.patcoin {
 }
 
 img.patcoin:hover {
-  width: 278px;
-  height: 278px;
+  width: 200px;
+  height: 200px;
   transition: .5s ease-in-out;
 }
+
+img.patcoin:active {
+  width: 230px;
+  height: 230px;
+  /* transition: .5s ease-in-out; */
+}
+
+/* img.patcoin:hover .stage-container {
+  background-color: chartreuse;
+} */
 
 .timer-label {
   font-size: 14px;
@@ -270,8 +282,6 @@ h5.timer {
 
 
 
-
-
 /* -----TASK----- */
 
 
@@ -309,6 +319,39 @@ h5.timer {
   /* background-color: aliceblue; */
 }
 
+.reward-notification {
+  background-color: rgba(162, 188, 46, .4);
+  padding: 10px 0;
+  border-radius: 5px;
+  z-index: 1;
+  position: sticky;
+  float: right;
+  width: 100%;
+  margin-top: -155px;
+  display: none;
+  animation: notify-reward .7s;
+  /* position: absolute; */
+}
+
+@keyframes notify-reward {
+  0% {
+    transform: translateY(-150%);
+  }
+
+  55%{
+    transform: translateY(35%);
+  }
+}
+
+
+
+.ntfctn-content {
+  font-size: 25px;
+}
+
+.reward-value {
+  color: rgb(203, 247, 5);
+}
 
 .task {
   --task-width: 300px;
@@ -325,9 +368,9 @@ h5.timer {
   padding: var(--task-padding);
   align-items: center;
   text-decoration: none;
-  margin: 3px auto;
+  margin: 5px auto;
   border-radius: 5px;
-  background-color: rgb(138, 167, 109);
+  background-color: rgb(102, 130, 75);
 }
 
 .task:hover {
@@ -343,6 +386,25 @@ h5.timer {
   align-items: center;
   background-color: rgba(96, 137, 75, 0.668);
   border: 2.6px solid greenyellow;
+}
+
+.task-name {
+  /* background-color: aliceblue; */
+  height: 100%;
+  width: auto;
+  align-content: center;
+}
+
+.task-one {
+  display: flex;
+}
+
+
+.name1, .name2 {
+  /* margin: auto 10px; */
+  height: 50px;
+  align-items: center;
+  overflow: hidden;
 }
 
 .reduce-font {
@@ -373,18 +435,37 @@ a .task-currency {
   font-size: 14px;
 }
 
-.claim{
-  /* background-color: rgba(44, 69, 96, 0.782); */
+.claim-btn{
+  background-color: rgba(44, 69, 96, 0.782);
   padding: 3px 7px;
   border-radius: 12px;
-  font-size: 12px;
+  font-size: 13px;
   cursor: pointer;
+  font-size: 17px;
+  display: none;
+  z-index: 1;
+  height: 20px;
+}
+
+.claim{
+  /* background-color: rgba(44, 69, 96, 0.782); */
+  height: 20px;
+  width: fit-content;
+  display: flex;
+  align-content: center;
+  margin: auto 0;
+  padding: 3px 7px;
+  border-radius: 12px;
+  font-size: 13px;
+  cursor: pointer;
+  display: block;
+  background-color: var(--bg-color);
+  float: right;
 }
 
 .opaciti{
-  opacity: .6;
+  opacity: .3;
 }
-
 
 
 
@@ -478,11 +559,57 @@ input {
   border-radius: 9px;
 }
 
-.btn {
+.copy-cot {
+  display: flex;
+  align-items: center;
+  background-color: darkslategray;
+  border: 1.3px solid goldenrod;
+  box-shadow: 0 0 9px -1px;
+  border-radius: 5px;
+  height: 50px;
+  width: fit-content;
+}
+
+.fa-copy {
+  align-content: center;
+}
+
+/* .btn {
   width: 80px;
   color: black;
   padding: 0 10px;
   border-radius: 10px;
+  margin: auto;
+} */
+
+form {
+  margin: 10px;
+  height: 120px;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-control {
+  color: rgba(0, 40, 200, 0.977);
+  border-radius: 5px;
+  border: navajowhite;
+  padding: 10px 15px;
+  margin-bottom: 10px;
+  background-color: rgb(146, 146, 146);
+  opacity: 0;
+}
+
+.btn {
+  color: white;
+  font-weight: 600;
+  background-color: unset;
+  padding-right: 15px;
+  font-size: 24px;
+  width: 150px;
+  margin-right: 10px;
+  margin-top: 5px;
+  border: unset;
 }
 
 .coupon {
@@ -503,6 +630,8 @@ input {
   box-shadow: 0 0 5px -1px;
   display: grid;
 }
+
+
 
 
 
@@ -561,14 +690,20 @@ input {
     height: 65px;
   }
 
- 
+ #stage {
+  color: greenyellow;
+ }
 
   img.patcoin {
-    height: 270px;
-    width: 270px;
+    height: 220px;
+    width: 220px;
     padding: 0;
     margin: 10px 0 30px;
     box-shadow: 0 10px 138px 12px rgb(247, 189, 31);
+  }
+
+  .stage {
+    z-index: 1;
   }
 
 
@@ -603,10 +738,16 @@ input {
     font-size: 15px;
   }
  
-.description-container {
-  width: 97%;
-  height: 400px;
-}
+  .description-container {
+    width: 97%;
+    height: 400px;
+  }
+
+
+
+
+
+
 
 
   /* -----TASK----- */
@@ -616,6 +757,10 @@ input {
     background-color:  var(--options-bg-color);
     height: 90%;
     padding: 120px 10px;
+  }
+
+  .task-heading {
+    font-size: 15px;
   }
 
   .referal-container{
@@ -628,23 +773,24 @@ input {
   }
 
   form {
-    margin: 20px;
-    height: 90px;
+    margin: 10px;
+    height: 120px;
     align-items: center;
     display: flex;
     flex-direction: column;
   }
 
   .form-control {
-    color: rgb(91, 255, 247);
+    color: rgba(0, 40, 200, 0.977);
     border-radius: 5px;
     border: navajowhite;
     padding: 10px 15px;
+    margin-bottom: 10px;
     background-color: rgb(146, 146, 146);
 
   }
 
-  .btn {
+  /* .btn {
     color: white;
     background-color: darkslategray;
     border-radius: 5px;
@@ -653,8 +799,8 @@ input {
     font-size: 19px;
     width: 160px;
     box-shadow: 0 0 9px -1px;
-  }
-
+    margin-top: 10px;
+  } */
 
   .referal-heading {
     border-radius: 16px;

@@ -17,7 +17,8 @@ document.addEventListener("DOMContentLoaded", () => {
       localStorage.setItem("count", count);
   }
 
-  function handleIncrement() {
+  function handleIncrement(e) {
+    e.preventDefault();
       if (!isCountingDown) {
           count++;
           countElement.textContent = count;
@@ -50,6 +51,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       
   }
+  
 
   function startCountdown() {
       isCountingDown = true;
@@ -84,18 +86,29 @@ const coupon = document.querySelector(".coupon")
 const copyText = (e) => {
  e.preventDefault();
 
-coupon.select();
-coupon.setSelectionRange(0, 9999);
+ coupon.select();
+ coupon.setSelectionRange(0, 9999);
 
 
   document.execCommand("copy");
 
-  btn.textContent = "Copied..!!"
+  btn.textContent = "Copied..!"
   setTimeout(() => {
     btn.textContent = "Copy"
   }, 3000) 
 
+
+const addreward = () => {
+  coupon.addEventListener("click") = function() {
+    function updateLocalStorage() {
+      localStorage.setItem("count", count);
+      countElement + 200;
+  }
+  }
+
 }
+}
+
 
 
 btn.addEventListener("click", copyText);
